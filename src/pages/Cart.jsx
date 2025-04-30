@@ -16,7 +16,7 @@ export const Cart = () => {
   return (<div className="flex flex-col items-center">
     {
       cart.length > 0 ?
-      ( <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-10 p-5>
+      ( <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-10 p-5">
          <div className="">
           { 
           cart.map((item, index) => {
