@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {add, remove} from "../redux/Slices/CartSlice";
-import { toast } from "react-toastify/unstyled"; 
+import { toast } from "react-hot-toast"; 
 
 
 
