@@ -13,10 +13,10 @@ export const Cart = () => {
     setTotalAmount (cart.reduce ((acc, curr) => acc + curr.price, 0) );
   },[cart])
   
-  return (<div className="">
+  return (<div className="flex flex-col items-center">
     {
       cart.length > 0 ?
-      ( <div className="flex justify-center items-center gap-8">
+      ( <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-10 p-5
          <div className="">
           { 
           cart.map((item, index) => {
@@ -24,8 +24,8 @@ export const Cart = () => {
           })
         }
          </div>
-           <div className="">
-           <div className="gap-2 flex flex-col justify-start pb-[100px] w-[120px] h-[300px]">
+           <div className="flex flex-col pb-5">
+           <div className="flex flex-col justify-start pb-[100px] w-[120px] h-[300px]">
             <div className="text-green-600 font-semibold uppercase">Your Cart</div>
             <div className="text-green-600 font-semibold text-4xl uppercase">Summary</div>
             <p>
@@ -33,7 +33,7 @@ export const Cart = () => {
             </p>
           </div> 
 
-          <div className="flex flex-col justify-end pt-40">
+          <div className="flex flex-col pt-4">
           <p>Total Amount: <span className="font-semibold">${totalAmount}</span></p> 
           <button className="bg-green-600  font-semibold text-white rounded-[5px] w-[300px] h-[40px]">
             Checkout Now
